@@ -1,0 +1,7 @@
+---
+# Basic setup for a new server. 
+
+- hosts: all
+  remote_user: root
+  roles:
+    - common

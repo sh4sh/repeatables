@@ -1,0 +1,9 @@
+---
+- name: Add sudo users
+  user:
+    name: "{{ item.name }}"
+    groups: wheel
+    create_home: yes
+    shell: /bin/bash
+    state: present
+  with_items: "{{ sudoers }}"
