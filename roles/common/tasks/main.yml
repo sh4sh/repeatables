@@ -1,4 +1,6 @@
 ---
+#- name: Check for updates, download & install
+
 - name: Add sudo users
   user:
     name: "{{ item.name }}"
@@ -7,3 +9,14 @@
     shell: /bin/bash
     state: present
   with_items: "{{ sudoers }}"
+
+#- name: Add non-sudo users
+#  user:
+#    name: "{{ item.name }}"
+#    create_home: yes
+#    shell: /bin/bash
+#    state: present
+#  with_items: "{{ users }}"
+
+#- name: Add deploy keys for users
+# copy contents of file '~/.ssh/"{{ item.name }}"_key.pub' 

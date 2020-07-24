@@ -1,0 +1,6 @@
+---
+ansible_ssh_user: "{{ vault_ansible_ssh_user }}"
+
+sudoers: "{{ vault_sudoers }}"
+#users: "{{ vault_users }}"
+
