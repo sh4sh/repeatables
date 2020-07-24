@@ -1,5 +1,5 @@
 ---
-#- name: Check for updates, download & install
+#- name: Check for updates, download & install 
 
 - name: Add sudo users
   user:
@@ -19,7 +19,7 @@
 
 #- name: Add deploy keys for users
 #  authorized_key:
-#    user: {{ item.name }}
+#    user: "{{ item.name }}""
 #    key: "{{ lookup('file', 'keys/{{ item.name }}') }}"
 #    state: present
 #  with_items: "{{ users }}"
