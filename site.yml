@@ -2,6 +2,7 @@
 # Basic setup for a new server. 
 
 - hosts: all
-  remote_user: root
+  remote_user: "{{ ansible_ssh_user }}"
+  become: yes
   roles:
     - common
